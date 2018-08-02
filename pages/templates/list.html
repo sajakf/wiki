@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Page-list </title>
+</head>
+<body>
+
+	{% for page in list %}
+	<ul>
+		<li>
+			<a href="{% url 'page-detail' page.id %}"></a><h1>{{page.tile}}</h1>
+	</li>
+	<li>
+		<p>{{page.content}}</p>
+	</li>
+	<li>
+		<p>{{page.last_update}}</p>
+		</li>
+	</ul><br>
+{% endfor %}
+
+
+
+</body>
+</html>
